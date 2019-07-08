@@ -21,9 +21,9 @@ function _toInteger(num1, num2) {
     l2 = num2.split('.')[1].length
   }
   if (l1 > l2) {
-    l = Math.pow(10, l1)
+    l = 10 ** l1
   } else {
-    l = Math.pow(10, l2)
+    l = 10 ** l2
   }
   num1 = Number(num1) * l
   num2 = Number(num2) * l
@@ -46,7 +46,7 @@ exports.subFn = (a, b) => {
 
 exports.multiFn = (a, b) => {
   let {num1, num2, l} = _toInteger(a, b)
-  return (num1 * num2) / Math.pow(l, 2)
+  return (num1 * num2) / l ** 2
 }
 
 exports.divideFn = (a, b) => {

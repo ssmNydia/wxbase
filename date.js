@@ -46,7 +46,7 @@ exports.format = (date, fmt = 'y/m/d h:i') => {
 
 /**
  * 距离date过去了多久
- * N[天、小时、分钟、秒]前
+ * N[天、小时、分钟、秒]
  */
 exports.countdownDate = (date) => {
   const now = new Date()
