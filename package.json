@@ -1,6 +1,6 @@
 {
   "name": "wxbase",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "封装微信小程序常用的基础功能",
   "main": "wxbase.js",
   "scripts": {
