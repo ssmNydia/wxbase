@@ -1,0 +1,23 @@
+{
+  "name": "wxbase",
+  "version": "0.0.1",
+  "description": "封装微信小程序常用的基础功能",
+  "main": "wxbase.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssmNydia/wxbase.git"
+  },
+  "keywords": [
+    "wechat",
+    "wx"
+  ],
+  "author": "smm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ssmNydia/wxbase/issues"
+  },
+  "homepage": "https://github.com/ssmNydia/wxbase#readme"
+}
