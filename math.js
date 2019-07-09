@@ -30,27 +30,27 @@ function _toInteger(num1, num2) {
   return {
     num1,
     num2,
-    l
+    l,
   }
 }
 
 exports.addFn = (a, b) => {
-  let {num1, num2, l} = _toInteger(a, b)
+  const { num1, num2, l } = _toInteger(a, b)
   return (num1 + num2) / l
 }
 
 exports.subFn = (a, b) => {
-  let {num1, num2, l} = _toInteger(a, b)
+  const { num1, num2, l } = _toInteger(a, b)
   return (num1 - num2) / l
 }
 
 exports.multiFn = (a, b) => {
-  let {num1, num2, l} = _toInteger(a, b)
+  const { num1, num2, l } = _toInteger(a, b)
   return (num1 * num2) / l ** 2
 }
 
 exports.divideFn = (a, b) => {
-  let {num1, num2, l} = _toInteger(a, b)
+  const { num1, num2 } = _toInteger(a, b)
   return (num1 / num2)
 }
 

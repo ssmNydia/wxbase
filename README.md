@@ -80,10 +80,11 @@ onHide() {
 日期格式化
 
 第一个参数传 date，第二个参数传入格式化的要求
-
-y、m、d等，是实际值
-
-yy、mm、dd等，是补零后的值
+支持用以下支持的字符串组成任意格式
+格式化支持：
+- y、m、d、h、i、s，是实际值
+- yy、mm、dd、hh、ii、ss，是补零后的值
+- z周几、xq星期几
 
 ``` javascript
 format(new Date(), 'y-m-d h:i')
@@ -92,6 +93,10 @@ format(new Date(), 'yy-mm-dd hh:ii:ss')
 // 2019-07-04 09:04:08
 format(new Date(), 'd日 hh:ii')
 // 4日 09:04
+format(new Date(), 'yymmdd z')
+// 20190704 周四
+format(new Date(), 'xq yy-mm-dd')
+// 星期四 2019-07-04
 ```
 
 #### countdownDate

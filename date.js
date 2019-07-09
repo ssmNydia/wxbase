@@ -12,6 +12,8 @@
  * h 小时  hh 补零的小时
  * i 分钟  ii 补零的分钟
  * s 秒    ss 补零的秒
+ * z 周几
+ * xq 星期几
  */
 exports.format = (date, fmt = 'y/m/d h:i') => {
   const year = date.getFullYear()
@@ -20,7 +22,8 @@ exports.format = (date, fmt = 'y/m/d h:i') => {
   const hour = date.getHours()
   const minute = date.getMinutes()
   const second = date.getSeconds()
-
+  const weekend = date.getDay()
+  const weekendCN = ['日', '一', '二', '三', '四', '五', '六'][weekend]
   const [ yy, mm, dd, hh, ii, ss ] = [year, month, day, hour, minute, second].map(function (n) {
     n = n.toString()
     return n[1] ? n : '0' + n
@@ -37,9 +40,11 @@ exports.format = (date, fmt = 'y/m/d h:i') => {
     dd,
     hh,
     ii,
-    ss
+    ss,
+    z: `周${weekendCN}`,
+    xq: `星期${weekendCN}`
   }
-  return fmt.replace(/[ymdhis]/g, function (v) {
+  return fmt.replace(/yy|mm|dd|hh|ii|ss|xq[ymdhisz]/g, function (v) {
     return obj[v]
   })
 }
